@@ -1,0 +1,60 @@
+[
+  // Basic Keymaps
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-k cmd-m": "zed::OpenKeymap"
+    }
+  },
+  // Vim insert mode keymappings
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j k": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  // Vim pane mappings
+  {
+    "context": "Editor  && vim_mode == normal && !VimWaiting && !menu || Dock",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  // Vim normal mode keymappings
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space e": "workspace::ToggleLeftDock",
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem"
+    }
+  },
+  // Terminal keymap
+  {
+    "context": "Editor && !VimWaiting && !menu",
+    "bindings": {
+      "cmd-`": [
+        "terminal_panel::ToggleFocus",
+        {
+          "if_not_focused": "workspace::NewTerminal"
+        }
+      ]
+    }
+  },
+  // Project panel mappings
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "escape": "workspace::ToggleLeftDock",
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Trash"
+    }
+  }
+]

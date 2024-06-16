@@ -1,0 +1,8 @@
+[
+  {
+    "label": "Start Browser Sync",
+    "command": "browser-sync start --config bs-config.js",
+    "use_new_terminal": true,
+    "reveal": "always"
+  }
+]
