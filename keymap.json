@@ -29,8 +29,10 @@
     "bindings": {
       "space space": "file_finder::Toggle",
       "space e": "workspace::ToggleLeftDock",
+      "space t r": "task::Rerun",
       "shift-h": "pane::ActivatePrevItem",
-      "shift-l": "pane::ActivateNextItem"
+      "shift-l": "pane::ActivateNextItem",
+      "g d": "editor::GoToDefinition"
     }
   },
   // Terminal keymap
@@ -50,11 +52,7 @@
     "context": "ProjectPanel",
     "bindings": {
       "space e": "workspace::ToggleLeftDock",
-      "escape": "workspace::ToggleLeftDock",
-      "a": "project_panel::NewFile",
-      "A": "project_panel::NewDirectory",
-      "r": "project_panel::Rename",
-      "d": "project_panel::Trash"
+      "escape": "workspace::ToggleLeftDock"
     }
   }
 ]
